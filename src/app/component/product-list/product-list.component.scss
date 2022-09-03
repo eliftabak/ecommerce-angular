@@ -1,0 +1,32 @@
+.product {
+ &__category {
+  .logo {
+   @apply mr-8 bg-gray-300 px-4 py-2;
+  }
+ 
+  .categories {
+   @apply flex gap-3;
+ 
+   &__cat {
+    @apply px-4 py-2 cursor-pointer;
+
+    &:hover {
+     @apply text-gray-400;
+    }
+   }
+  }
+ }
+
+ &-list {
+  @apply table w-full;
+
+  &::after {
+   content: "";
+   clear: both;
+  }
+
+  .product__item {
+   @apply float-left table-cell w-[33%];
+  }
+ }
+}

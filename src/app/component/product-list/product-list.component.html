@@ -1,0 +1,27 @@
+<!-- Category Filter Facets -->
+<div class="product__category flex w-full mb-12">
+ <div class="logo">LOGO</div>
+ <div class="categories">
+  <div class="js-category categories__cat">all</div>
+  <div class="js-category categories__cat">electronics</div>
+  <div class="js-category categories__cat">jewelery</div>
+  <div class="js-category categories__cat">men's clothing</div>
+  <div class="js-category categories__cat">women's clothing</div>
+ </div>
+</div>
+
+
+<div class="product-list">
+ <ng-container *ngFor="let product of productData">
+  <div class="product__item">
+   <img src="{{product.image}}" alt="{{product.title}}">
+   <div class="product__bottom-section">
+    <p class="product__name">{{product.title}}</p>
+    <div class="product__bottom-cta">
+     <span class="product__price">${{product.price}}</span>
+     <button class="product__cta">Add to cart</button>
+    </div>
+   </div>
+  </div>
+ </ng-container>
+</div>
