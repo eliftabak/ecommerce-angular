@@ -13,7 +13,6 @@ export class StoreApiService {
     return this.http.get<any>('https://fakestoreapi.com/products')
     .pipe(map((response:any)=>{
       return response;
-      console.log(response)
     }))
   }
 }

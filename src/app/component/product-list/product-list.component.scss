@@ -3,10 +3,10 @@
   .logo {
    @apply mr-8 bg-gray-300 px-4 py-2;
   }
- 
+
   .categories {
    @apply flex gap-3;
- 
+
    &__cat {
     @apply px-4 py-2 cursor-pointer;
 
@@ -18,15 +18,38 @@
  }
 
  &-list {
-  @apply table w-full;
+  @apply flex flex-wrap justify-around items-stretch gap-10 w-full;
+  @apply lg:gap-14;
 
-  &::after {
-   content: "";
-   clear: both;
-  }
+  .product {
+   &__item {
+    @apply w-[25%] flex flex-col justify-center;
+    @apply lg:w-1/5;
 
-  .product__item {
-   @apply float-left table-cell w-[33%];
+    img {
+     @apply max-h-48 object-contain w-full;
+    }
+   }
+
+   &__image {
+    @apply w-48 h-48 self-center flex justify-center;
+   }
+
+   &__name {
+    @apply text-gray-800 h-16 mt-4 relative text-sm font-bold self-center inline-block break-words overflow-hidden;
+   }
+
+   &__bottom-section {
+    @apply flex justify-between text-xs;
+
+    .price {
+     @apply font-light;
+    }
+
+    .cta-btn {
+     @apply py-1 px-2 bg-gray-300 rounded-3xl;
+    }
+   }
   }
  }
 }

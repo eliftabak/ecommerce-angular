@@ -1,3 +1,38 @@
-<div>
- 
-</div>
+<ng-container *ngIf="products.length !=0">
+ <div class="shopping-cart">
+  <h1>Shopping Cart</h1>
+  <div *ngFor="let product of products; let i = index" class="shopping-cart__item">
+   <div class="shopping-cart__item-img">
+    <img src="{{product.image}}" alt="{{product.title}}">
+   </div>
+   <div class="shopping-cart__item-info">
+    <div class="shopping-cart__item-info-top">
+      <p class="shopping-cart__item-name">{{product.title}}</p>
+      <span (click)="removeCartElement(product)" class="shopping-cart__item-delete"></span>
+    </div>
+    <div class="shopping-cart__item-bottom">
+      <div class="shopping-cart__item-quantity">
+        <span (click)="increase(product)" class="plus">+</span>
+        <p>{{product.quantity}}</p>
+        <span (click)="decrease(product)" class="minus">-</span>
+      </div>
+      <p class="shopping-cart__item-price">${{product.price}}</p>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="shopping-cart__total">
+  <span>Total Price</span>
+  <span class="js-total">${{total}}</span>
+ </div>
+</ng-container>
+
+
+<ng-container *ngIf="products.length == 0">
+  <div class="shopping-cart">
+    <div class="shopping-cart__empty">
+      <h1>Shopping Cart</h1>
+      <div>Your cart is empty.</div>
+    </div>
+   </div>
+</ng-container>

@@ -1,0 +1,12 @@
+.main-container {
+ @apply flex;
+
+ app-product-list {
+  @apply w-[60%];
+ }
+
+ app-shopping-cart{
+  @apply w-[40%] pl-4;
+  @apply lg:mt-20 lg:border-l border-gray-400;
+ }
+}
