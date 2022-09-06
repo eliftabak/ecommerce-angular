@@ -1,6 +1,6 @@
 .product {
  &__category {
-  @apply absolute top-0 left-0;
+  @apply absolute top-0 left-0 text-center;
   @apply md:flex md:relative;
 
   .logo {
@@ -9,8 +9,8 @@
   }
 
   .categories {
-   @apply flex flex-wrap gap-3 justify-between;
-   @apply flex-nowrap;
+   @apply flex flex-wrap gap-3 justify-around;
+   @apply md:flex-nowrap;
 
    &__cat {
     @apply px-4 py-2 cursor-pointer;
@@ -49,6 +49,7 @@
 
    &__bottom-section {
     @apply flex justify-between text-xs;
+    @apply lg:w-[110%];
 
     .price {
      @apply font-light;
