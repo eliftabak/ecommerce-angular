@@ -54,6 +54,7 @@ export class ShoppingCartComponent implements OnInit {
       if (product.id === item.id) {
         this.products.splice(index, 1);
         this.getTotalPrice();
+        product.quantity = 1;
       }
     })
   }

@@ -1,5 +1,7 @@
 .shopping-cart {
-  @apply m-5 p-5 bg-gray-300 rounded-3xl;
+  @apply m-5 py-4 px-7 bg-gray-300 rounded-3xl h-52 overflow-scroll;
+  @apply md:h-auto;
+  @apply lg:p-5;
 
   h1 {
     @apply text-base font-semibold text-gray-800 mb-5;
@@ -41,7 +43,7 @@
       }
 
       span {
-        @apply bg-gray-50 shadow-slate-400 shadow-lg px-2 mx-1;
+        @apply bg-gray-50 shadow-slate-400 shadow-lg px-2 mx-1 cursor-pointer;
       }
     }
 
@@ -54,6 +56,8 @@
     }
 
     &-delete {
+      @apply cursor-pointer;
+
       &::before {
         content: '\2715';
         @apply text-xs;

@@ -1,11 +1,16 @@
 .product {
  &__category {
+  @apply absolute top-0 left-0;
+  @apply md:flex md:relative;
+
   .logo {
-   @apply mr-8 bg-gray-300 px-4 py-2;
+   @apply bg-gray-300 px-4 py-2;
+   @apply md:mr-8;
   }
 
   .categories {
-   @apply flex gap-3;
+   @apply flex flex-wrap gap-3 justify-between;
+   @apply flex-nowrap;
 
    &__cat {
     @apply px-4 py-2 cursor-pointer;
@@ -18,12 +23,14 @@
  }
 
  &-list {
-  @apply flex flex-wrap justify-around items-stretch gap-10 w-full;
+  @apply flex flex-wrap justify-evenly items-stretch gap-6 w-full;
+  @apply md:gap-y-10;
   @apply lg:gap-14;
 
   .product {
    &__item {
-    @apply w-[25%] flex flex-col justify-center;
+    @apply w-full flex flex-col justify-center;
+    @apply md:w-2/5;
     @apply lg:w-1/5;
 
     img {
@@ -32,7 +39,8 @@
    }
 
    &__image {
-    @apply w-48 h-48 self-center flex justify-center;
+    @apply w-36 h-36 self-center flex justify-center;
+    @apply lg:w-48 lg:h-48;
    }
 
    &__name {
