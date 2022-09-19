@@ -2,7 +2,14 @@
 
 ### This is an e-commerce page created using `https://fakestoreapi.com/products` and styled with Tailwind CSS.
 
+### Live at https://eliftabak.github.io/ecommerce-angular/
+
 This project was generated with [Angular CLI] version 14.2.1.
+
+##Preview
+
+https://user-images.githubusercontent.com/58824027/190975410-c3e8e014-10e2-42ce-8acc-adad09fb607e.mov
+
 
 ## Development server
 
